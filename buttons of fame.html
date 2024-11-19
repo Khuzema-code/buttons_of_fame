@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Buttons Collection</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+    }
+    h1 {
+      color: silver;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.4s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    
+    /* Button 1: Royal Submit */
+    .btn-royal-submit {
+      background: linear-gradient(145deg, #6a0dad, #ff6347);
+      color: white;
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1), -4px -4px 15px rgba(255, 255, 255, 0.3);
+      transform: scale(1);
+    }
+    .btn-royal-submit:hover {
+      background: linear-gradient(145deg, #ff6347, #6a0dad);
+      box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2), -4px -4px 30px rgba(255, 255, 255, 0.5);
+      transform: scale(1.1);
+    }
+    .btn-royal-submit:active {
+      transform: scale(1);
+    }
+
+    /* Button 2: Golden Login */
+    .btn-golden-login {
+      background: linear-gradient(145deg, #ffd700, #ffcc00);
+      color: #6b4f1f;
+      border: 3px solid #ffd700;
+      box-shadow: 0 8px 20px rgba(255, 223, 0, 0.3);
+    }
+    .btn-golden-login:hover {
+      background: linear-gradient(145deg, #ffcc00, #ffd700);
+      box-shadow: 0 12px 30px rgba(255, 223, 0, 0.5);
+      transform: translateY(-6px);
+    }
+    .btn-golden-login:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    /* Button 3: Diamond Download */
+    .btn-diamond-download {
+      background: linear-gradient(145deg, #b9e3d3, #1f3a52);
+      color: white;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+    .btn-diamond-download:hover {
+      background: linear-gradient(145deg, #1f3a52, #b9e3d3);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(255, 255, 255, 0.3);
+      transform: translateY(-6px);
+    }
+
+    /* Button 4: Royal Purple */
+    .btn-royal-purple {
+      background: linear-gradient(135deg, #7b2cbf, #4b0082);
+      color: white;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2), -5px -5px 20px rgba(255, 255, 255, 0.4);
+    }
+    .btn-royal-purple:hover {
+      background: linear-gradient(135deg, #4b0082, #7b2cbf);
+      box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3), -5px -5px 25px rgba(255, 255, 255, 0.5);
+      transform: scale(1.05);
+    }
+
+    /* Button 5: Sapphire Blue */
+    .btn-sapphire-blue {
+      background: linear-gradient(145deg, #0047ab, #00bfff);
+      color: white;
+      border-radius: 20px;
+      text-transform: capitalize;
+    }
+    .btn-sapphire-blue:hover {
+      background: linear-gradient(145deg, #00bfff, #0047ab);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+    }
+
+    /* Button 6: Emerald Green */
+    .btn-emerald-green {
+      background: linear-gradient(145deg, #50c878, #0e8e3c);
+      color: white;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    .btn-emerald-green:hover {
+      background: linear-gradient(145deg, #0e8e3c, #50c878);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Button 7: Ruby Red */
+    .btn-ruby-red {
+      background: linear-gradient(145deg, #e0115f, #ff2400);
+      color: white;
+      border: 2px solid #e0115f;
+    }
+    .btn-ruby-red:hover {
+      background: linear-gradient(145deg, #ff2400, #e0115f);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
+    }
+
+    /* Button 8: Platinum Submit */
+    .btn-platinum-submit {
+      background: linear-gradient(145deg, #e5e4e2, #b0b0b0);
+      color: #4f4f4f;
+      border-radius: 50px;
+    }
+    .btn-platinum-submit:hover {
+      background: linear-gradient(145deg, #b0b0b0, #e5e4e2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-4px);
+    }
+
+    /* Button 9: Opal White */
+    .btn-opal-white {
+      background: linear-gradient(145deg, #fefefe, #dcdcdc);
+      color: #555555;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .btn-opal-white:hover {
+      background: linear-gradient(145deg, #dcdcdc, #fefefe);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transform: scale(1.05);
+    }
+
+    /* Button 10: Bronze Download */
+    .btn-bronze-download {
+      background: linear-gradient(145deg, #cd7f32, #c27c2d);
+      color: white;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    .btn-bronze-download:hover {
+      background: linear-gradient(145deg, #c27c2d, #cd7f32);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transform: translateY(-5px);
+    }
+
+    /* Common Hover and Active Effects */
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Royal Buttons Collection</h1>
+
+  <div class="button-container">
+    <!-- Button 1: Royal Submit -->
+    <button class="btn btn-royal-submit" onclick="alert('Submitted!')">Submit</button>
+
+    <!-- Button 2: Golden Login -->
+    <button class="btn btn-golden-login" onclick="alert('Logged In!')">Login</button>
+
+    <!-- Button 3: Diamond Download -->
+    <button class="btn btn-diamond-download" onclick="alert('Downloading...')">Download</button>
+
+    <!-- Button 4: Royal Purple -->
+    <button class="btn btn-royal-purple" onclick="alert('Royal Purple!')">Royal Purple</button>
+
+    <!-- Button 5: Sapphire Blue -->
+    <button class="btn btn-sapphire-blue" onclick="alert('Blue Sapphire!')">Sapphire Blue</button>
+
+    <!-- Button 6: Emerald Green -->
+    <button class="btn btn-emerald-green" onclick="alert('Emerald Green!')">Emerald Green</button>
+
+    <!-- Button 7: Ruby Red -->
+    <button class="btn btn-ruby-red" onclick="alert('Ruby Red!')">Ruby Red</button>
+
+    <!-- Button 8: Platinum Submit -->
+    <button class="btn btn-platinum-submit" onclick="alert('Platinum Submitted!')">Platinum Submit</button>
+
+    <!-- Button 9: Opal White -->
+    <button class="btn btn-opal-white" onclick="alert('Opal White!')">Opal White</button>
+
+    <!-- Button 10: Bronze Download -->
+    <button class="btn btn-bronze-download" onclick="alert('Downloading Bronze!')">Bronze Download</button>
+  </div>
+
+</body>
+</html>
